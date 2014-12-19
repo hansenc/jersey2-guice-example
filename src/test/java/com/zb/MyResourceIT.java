@@ -1,6 +1,6 @@
 package com.zb;
 
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import javax.ws.rs.client.Client;
@@ -18,7 +18,7 @@ public class MyResourceIT {
   public void get() {
     String result = client.target(baseUri + "/myresource").request().get(String.class);
     assertNotNull(result);
-    assertFalse(result.isEmpty());
+    assertEquals("Got it!", result);
   }
 
   private Client createClient() {

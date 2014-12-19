@@ -14,6 +14,8 @@
     <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 
     <mainClass>com.zb.Main</mainClass>
+
+    <jetty.version>9.2.6.v20141205</jetty.version>
   </properties>
 
   <dependencyManagement>
@@ -32,7 +34,17 @@
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-server</artifactId>
-      <version>9.2.6.v20141205</version>
+      <version>${jetty.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-servlet</artifactId>
+      <version>${jetty.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.squarespace.jersey2-guice</groupId>
+      <artifactId>jersey2-guice</artifactId>
+      <version>0.5</version>
     </dependency>
     <dependency>
       <groupId>org.glassfish.jersey.containers</groupId>
@@ -46,6 +58,12 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.7</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

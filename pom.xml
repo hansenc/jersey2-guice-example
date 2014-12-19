@@ -4,10 +4,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.zb</groupId>
-  <artifactId>stack-example</artifactId>
+  <artifactId>jersey2-guice-example</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>stack-example</name>
+  <name>jersey2-guice Example</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -69,7 +69,6 @@
   </dependencies>
 
   <build>
-    <finalName>stack-example</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

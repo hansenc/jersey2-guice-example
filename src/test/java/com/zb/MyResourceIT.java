@@ -6,17 +6,19 @@ import static org.junit.Assert.assertNotNull;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 
+import org.junit.ClassRule;
 import org.junit.Test;
 
 public class MyResourceIT {
 
-  private String baseUri = "http://localhost:8080";
+  @ClassRule
+  public static ServerRule serverRule = new ServerRule();
 
   private Client client = createClient();
 
   @Test
   public void get() {
-    String result = client.target(baseUri + "/myresource").request().get(String.class);
+    String result = client.target(serverRule.getBaseUri() + "myresource").request().get(String.class);
     assertNotNull(result);
     assertEquals("Got it!", result);
   }
